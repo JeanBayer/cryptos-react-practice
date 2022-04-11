@@ -36,7 +36,7 @@ const Formulario = ({ setMonedas }) => {
 
   useEffect(() => {
     const consultarAPI = async () => {
-      const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=MXN`;
+      const url = `https://min-api.cryptocompare.com/data/top/mktcapfull?limit=10&tsym=MXN&api_key=ba782807ba7b1f0cb4e71e8517a349dc1800d63b72afd9275f0e78b3b83fbb68`;
 
       const respuesta = await fetch(url);
       const resultado = await respuesta.json();
@@ -48,6 +48,7 @@ const Formulario = ({ setMonedas }) => {
         };
       });
 
+      console.log(arrayCriptos);
       setCriptos(arrayCriptos);
     };
 
